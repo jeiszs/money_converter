@@ -1,0 +1,39 @@
+// Name: Jei <3
+// Date: September 19, 2022
+// Problem: Money convertion from whole to denominations
+// Language: C++
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main() {
+  double userMoney;
+  cout<< "How much money have you got? $";
+  cin>> userMoney;
+  
+  int twenties = userMoney / 20;
+  cout<< "\nTwenties = "<< twenties<< endl;
+  userMoney -= (twenties*20);
+  
+  int fives = userMoney / 5;
+  cout<< "Fives = "<< fives<< endl;
+  userMoney -= (fives*5);
+
+  int dollars = userMoney / 1;
+  cout<< "Dollars = "<< dollars<< endl;
+  userMoney -= (dollars*1);
+  
+  int quarters = userMoney / 0.25;
+  cout<< "Quarters = "<< quarters<< endl;
+  userMoney -= (quarters*0.25);
+  
+  int dimes = userMoney / 0.10;
+  cout<< "Dimes = "<< dimes<< endl;
+  userMoney -= (dimes*0.10);
+
+  cout<< "Pennies = "<< (userMoney*100)<< endl;
+  cout<< userMoney;
+}
